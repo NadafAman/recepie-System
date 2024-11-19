@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 1rem; /* Add space between links */
+  font-size: 1.25rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Adjust spacing between logo and text */
+  text-decoration: none;
+  color: #ddd6cb;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem; /* Add space between logo and navigation links */
+}
+
+.logo img {
+  width: 4rem; /* Adjust size for smaller screens */
+  height: 4rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row; /* Arrange elements horizontally on larger screens */
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem 10%;
+  }
+
+  .nav ul {
+    flex-direction: row; /* Align navigation links horizontally */
+    gap: 1.5rem;
+  }
+
+  .logo {
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
+  }
+
+  .logo img {
+    width: 5rem; /* Restore larger size */
+    height: 5rem;
+  }
+}

@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 75rem;
+  flex-direction: column; /* Make the layout column on smaller screens */
+}
+
+.slideshow {
+  width: 100%;
+  max-width: 40rem;
+  height: 25rem;
+  margin-bottom: 2rem;
+}
+
+.hero {
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  text-align: center; /* Center align text on small screens */
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Center the buttons on small screens */
+  flex-direction: column; /* Stack buttons vertically on small screens */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  margin-top: 1rem; /* Add top margin for spacing between buttons */
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center; /* Center the text inside buttons */
+}
+
+.cta a:hover,
+.cta a:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.cta a:first-child {
+  background: transparent;
+  font-weight: normal;
+  color: #ff9b05;
+  padding-left: 0;
+}
+
+.cta a:first-child:hover,
+.cta a:first-child:active {
+  background: transparent;
+  color: #f9b241;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row; /* Switch to row layout on medium screens */
+    justify-content: space-between; /* Ensure space between slideshow and text */
+  }
+
+  .cta {
+    flex-direction: row; /* Arrange buttons horizontally on medium screens */
+    justify-content: flex-start; /* Align buttons to the left */
+  }
+
+  .cta a {
+    margin-top: 0; /* Remove top margin when buttons are in row */
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    font-size: 1.75rem; /* Adjust font size for larger screens */
+  }
+
+  .cta a {
+    padding: 0.75rem 1.5rem; /* Increase padding for larger screens */
+  }
+
+  .section {
+    font-size: 1.75rem; /* Increase font size for larger screens */
+  }
+}
